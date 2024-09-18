@@ -1,0 +1,27 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+    --st-color: #5f514e;
+    --nd-color: #192028;
+    --rd-color: #85df47;
+
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nd-color);
+    color: white;
+}
+
+.quizzoApp {
+    background-color: var(--st-color);
+    height: 20em;
+    width: 70%;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+}
