@@ -6,9 +6,9 @@ var tries = 3
 const score = document.querySelector('.score')
 const health = document.querySelector('.health')
 const header = document.querySelector('.header')
-const correctEffect = new Audio('Quizzo/sounds/correct.mp3')
-const wrongEffect = new Audio ('Quizzo/sounds/wrong.mp3')
-const music = new Audio('Quizzo/sounds/loop.mp3')
+const correctEffect = new Audio('./sounds/correct.mp3')
+const wrongEffect = new Audio ('./sounds/wrong.mp3')
+const music = new Audio('./sounds/loop.mp3')
 
 
 const fetcho = (url) => {
