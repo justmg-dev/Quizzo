@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizzo</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="logo"><img src="/images/logo-removebg.png" alt=""></div>
     <div class="quizzoApp">
+        <span id="playSound">♫</span>
         <div class="header">
-            <h3 class="questionNumber"></h3>
             <h1 class="questionTitle"></h1>
-            <h3 class="score">Score: 0</h3>
-            <h3 class="health"></h3>
+            <div class="status">
+                <h3 class="questionNumber bluebox"></h3>
+                <h3 class="score bluebox">Score: 0</h3>
+                <h3 class="health bluebox">Health: 3</h3>
+            </div>
         </div>
         <div class="options">
             <!-- <input type="radio" name="options" id="" onclick="tryo()">
@@ -31,4 +37,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
