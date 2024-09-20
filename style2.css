@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* İsteğe bağlı: Renk değişkenleri gibi */
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#51f6f2, #1ab5f8);
+    font-family: "Nunito Sans", sans-serif;
+    color: rgb(235, 235, 235);
+    position: relative;
+}
+
+.logo img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 30%; /* Yüzde ile ayarladık */
+    max-width: 420px; /* Maksimum genişlik sınırı */
+    height: auto;
+}
+
+#playSound {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    right: 2vw; /* Ekran genişliğine göre ayar yap */
+    top: 2vh; /* Ekran yüksekliğine göre ayar yap */
+    width: 36px;
+    height: 36px;
+    border: 1px solid #fd5766;
+    font-size: 24px;
+    background-color: white;
+    color: #fd5766;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.quizzoApp {
+    background: linear-gradient(#f82b64, #fd5766);
+    border-radius: 1em;
+    height: 50vh; /* Viewport yüksekliğine göre ayar yap */
+    width: 80vw; /* Viewport genişliğine göre ayar yap */
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    position: relative;
+}
+
+.header {
+    justify-content: center;
+    align-items: center;
+    background-color: #fd5766;
+    position: relative;
+    padding: 0.5em;
+    border-radius: 1em;
+    overflow: hidden;
+    display: flex;
+    height: 20%; /* Yüzde ile ayarladık */
+}
+
+.questionTitle {
+    flex-grow: 1;
+    font-size: 1.25rem;
+    margin-left: 1em;    
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    height: 100%;
+}
+
+.status>* {
+    border-radius: 0.12em;
+}
+
+.status :first-child {
+    border-radius: 0 1em 0 0;
+}
+
+.status :last-child {
+    border-radius: 0 0 1em 0;
+}
+
+.bluebox {
+    background-color: #2ed0dd;
+    padding: 4px;
+    font-size: 16px;
+    width: 6em;
+    box-shadow: inset -1px 1px 5px #1c59a4;
+}
+
+.headerOverlay {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 1px 1px 10px #910f19;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0.05;
+    animation: move 4s infinite alternate;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 4em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-grow: 1; /* Eşit genişlikte olmalarını sağlar */
+    min-width: 0; /* Minimum genişliği sıfırlayın */
+    background-color: #ffca3e;
+    box-shadow: 1px 1px 33px 3px #e6623e;
+    padding: 1rem 1em;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0.5em; /* Eşit boşluk için */
+}
+
+.option:hover {
+    background-color: #e9ba3a;
+}
+
+/* VIBRATION EFFFECT */
+.vibration {
+    animation: vibration 0.1s linear 4
+}
+
+@keyframes move {
+    0% {
+        transform: translate(25px, 0);
+    }
+    100% {
+        transform: translate(0, 25px) rotate(360deg);
+    }
+}
+
+@keyframes vibration {
+    0%, 100% { transform: translate(0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(-1px, 1px); }
+    20%, 40%, 60%, 80% { transform: translate(1px, -1px); }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .logo img {
+        width: 70%; /* Daha küçük ekranlar için ayarlama */
+    }
+
+    .quizzoApp {
+        width: 90%; /* Uygulama kutusunun genişliğini ayarlayın */
+    }
+
+    .option {
+        min-width: 100%; /* Seçeneklerin tam genişliğini kullanmasını sağlayın */
+    }
+}
