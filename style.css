@@ -131,7 +131,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    min-width: 16rem;
+    width: 1fr;
     width: fit-content;
     background-color: #ffca3e;
     box-shadow: 1px 1px 33px 3px #e6623e;
